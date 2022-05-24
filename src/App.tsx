@@ -1,4 +1,4 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import RootAppBar from "./components/RootAppBar/RootAppBar";
 import ThemeConfig from "./theme";
