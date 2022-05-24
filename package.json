@@ -1,0 +1,73 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://nandeshwarshubh.github.io/portfolio/",
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.1",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
+    "eslint": "^8.16.0",
+    "eslint-plugin-jest-dom": "^4.0.2",
+    "gh-pages": "^4.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "lodash": "^4.17.21",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.6.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules build package-lock.json",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "CI=true react-scripts test",
+    "prettier": "prettier --write .",
+    "lint": "eslint ./",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,html,css,json}": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
